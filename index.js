@@ -15,7 +15,7 @@ bot.on('message', function(event) {
   const linebotParser = bot.parser();
   app.post('/', linebotParser);
   
-  var server = app.listen(process.env.PORT || 5000, function() {
+  var server = app.listen(process.env.PORT || 3000, function() {
     var port = server.address().port;
     console.log("App now running on port", port);
   });
