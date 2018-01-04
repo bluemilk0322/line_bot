@@ -2,9 +2,9 @@ var linebot = require('linebot');
 var express = require('express');
 
 var bot = linebot({
-  channelId: '1555396741',
-  channelSecret: 'c3b2c59f2dbab4131e33bbc9f7093b73',
-  channelAccessToken:'SANNCBg73WAb60OORrk2d7MjfdcPi2EqYYENIz4VDzyBshrAGxTkiYnO+bp/j7yAGXA3rPe78R70WcKs7WhKZ3ey/HzmI+RpA8ZoxJmsb7TdTqFkiPaVwIhxTfcs3SN1nduFZt/KjkOU8CywC4VirAdB04t89/1O/w1cDnyilFU='
+  channelId: '1555541271',
+  channelSecret: 'e85c3a38cab5b3038d060eabfd6c55a8',
+  channelAccessToken:'arTWuAxdsjsf0Qz+TgYZJZNBDJQGEqxL/z5OU0Itnag3bMPSJL2b3dytYzS3YIN5b6CTVd7rXuGvF0VEXSdcAjT0TCWQIAs/1vPttvHuHnvx4lhchYDlW3GiXhb4nCUx8JGxXRFxV60ct1dwKH7DAAdB04t89/1O/w1cDnyilFU='
 });
 
 bot.on('message', function(event) {
@@ -15,7 +15,7 @@ bot.on('message', function(event) {
   const linebotParser = bot.parser();
   app.post('/', linebotParser);
   
-  var server = app.listen(process.env.PORT || 3000, function() {
+  var server = app.listen(process.env.PORT || 5000, function() {
     var port = server.address().port;
     console.log("App now running on port", port);
   });
@@ -33,9 +33,10 @@ bot.on('message', function(event) {
     }
   });
 
-  setTimeout(function(){
-    var userId = 'bluemilk0322';
-    var sendMsg = 'Fuck out';
-    bot.push(userId,sendMsg);
-    console.log('send: '+sendMsg);
-},5000);
+  setTimeout(function() {
+    var userId = 'U0bcf07a9f406c9e8a4718d2069afc012';
+    var sendMsg = "Fuck out";
+    bot.push(userId, [sendMsg]);
+    console.log('userId: ' + userId);
+    console.log('send: ' + sendMsg);
+}, 3000);
